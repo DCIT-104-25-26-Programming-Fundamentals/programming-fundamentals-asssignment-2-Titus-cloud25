@@ -41,4 +41,7 @@
 
 #include <iostream>
 using namespace std;
+double sumNumbers(double numbers[], int size){
+double sum = 0;
 
+}

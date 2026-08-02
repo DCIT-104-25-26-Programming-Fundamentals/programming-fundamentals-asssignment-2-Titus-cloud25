@@ -73,3 +73,163 @@
 #include <cmath>
 using namespace std;
 
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void modulus();
+void exponentiation();
+
+int main()
+{
+    int choice;
+
+    do
+    {
+        cout << "\n============================\n";
+        cout << "     SIMPLE CALCULATOR\n";
+        cout << "============================\n";
+        cout << "1. Addition\n";
+        cout << "2. Subtraction\n";
+        cout << "3. Multiplication\n";
+        cout << "4. Division\n";
+        cout << "5. Modulus\n";
+        cout << "6. Exponentiation\n";
+        cout << "7. Quit\n";
+        cout << "Select an operation (1-7): ";
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                addition();
+                break;
+
+            case 2:
+                subtraction();
+                break;
+
+            case 3:
+                multiplication();
+                break;
+
+            case 4:
+                division();
+                break;
+
+            case 5:
+                modulus();
+                break;
+
+            case 6:
+                exponentiation();
+                break;
+
+            case 7:
+                cout << "Goodbye!" << endl;
+                break;
+
+            default:
+                cout << "Invalid choice." << endl;
+        }
+
+    } while (choice != 7);
+
+    return 0;
+}
+
+void addition()
+{
+    double a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    cout << fixed << setprecision(2);
+    cout << "Result: " << a << " + " << b << " = " << a + b << endl;
+}
+
+void subtraction()
+{
+    double a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    cout << fixed << setprecision(2);
+    cout << "Result: " << a << " - " << b << " = " << a - b << endl;
+}
+
+void multiplication()
+{
+    double a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    cout << fixed << setprecision(2);
+    cout << "Result: " << a << " * " << b << " = " << a * b << endl;
+}
+
+void division()
+{
+    double a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    if (b == 0)
+    {
+        cout << "Error: Cannot divide by zero." << endl;
+        return;
+    }
+
+    cout << fixed << setprecision(2);
+    cout << "Result: " << a << " / " << b << " = " << a / b << endl;
+}
+
+void modulus()
+{
+    int a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    if (b == 0)
+    {
+        cout << "Error: Cannot divide by zero." << endl;
+        return;
+    }
+
+    cout << "Result: " << a << " % " << b << " = " << a % b << endl;
+}
+
+void exponentiation()
+{
+    double base, exponent;
+
+    cout << "Enter base: ";
+    cin >> base;
+
+    cout << "Enter exponent: ";
+    cin >> exponent;
+
+    cout << fixed << setprecision(2);
+    cout << "Result: " << base << " ^ " << exponent << " = " << pow(base, exponent) << endl;
+}
+
